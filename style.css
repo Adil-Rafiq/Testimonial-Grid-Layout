@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(237, 242, 248, 255);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+
+/* ------------------------ profiles ------------------------ */
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile > .img img{
+    border-radius: 50%;
+}
+.card1 .img, .card4 .img{
+    border: 3px solid rgba(167, 117, 242, 255);
+    border-radius: 50%;
+}
+
+.profile > .title{
+    margin-left: 1rem;
+    display: grid;
+    z-index: 1;
+}
+.profile > .title > span{
+    padding-top: 0.3rem;
+    color: hsl(0, 0%, 65%);
+}
+
+
+
+/* ------------------------ icon ------------------------ */
+.card1{
+    position: relative;
+}
+.icon{
+    position: absolute;
+    right: 8em;
+    top: 0;
+    opacity: 0.5;
+}
+@media only screen and (max-width: 1100px) {
+    .card1 > .icon {
+        right: 10%;
+    }  
+}
+
+
+/* ------------------------ cards layout ------------------------ */
+.container{
+    padding: 3.5rem 1.3rem;
+    width: min(95%, 70rem);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5"
+    ;
+}
+
+.card1{ grid-area: card1;}
+.card2{ grid-area: card2;}
+.card3{ grid-area: card3;}
+.card4{ grid-area: card4;}
+.card5{ grid-area: card5;}
+
+
+.card{
+    padding: 2em;
+    border-radius: 6px;
+    box-shadow: 0 0 1.5rem hsl(0, 0%, 65%); 
+}
+
+@media screen and (max-width: 1100px) {
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* ------------------------ cards fonts ------------------------ */
+.card:not(.card3, .card5){
+    color: #fff;
+}
+
+p{
+    color: hsl(0, 0%, 65%);
+}
+h2{
+    margin: 2rem 0 1.5rem 0;
+    z-index: 1;
+}
+h3{
+    font-size: small;
+    font-weight: lighter;
+}
+
+
+
+
+/* ------------------------ coloring cards ------------------------ */
+.card1{
+    background-color: hsl(263, 55%, 52%);
+}
+.card2{
+    background-color: hsl(217, 19%, 35%);
+}
+.card3, .card5{
+    background-color: #fff;
+}
+.card4{
+    background-color: hsl(219, 29%, 14%);
+}
